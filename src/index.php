@@ -1,3 +1,5 @@
 <?php
- phpinfo();
+ $char = 'stressed';
+ $answer = strrev($char);
+ echo $answer, "\n";
 ?>
