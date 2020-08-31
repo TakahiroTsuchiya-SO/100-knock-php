@@ -1,19 +1,19 @@
 version: '3'
 
 services:
-  web:
-    container_name: web
+  web-100:
+    container_name: web-100
     build:
       context: ./web
     ports:
-      - "8080:80"
+      - "8300:80"
     links:
-      - php
+      - php-100
     volumes:
       - ./src/:/var/www/
 
-  php:
-    container_name: php
+  php-100:
+    container_name: php-100
     build:
       context: ./php
     command: php-fpm -F
